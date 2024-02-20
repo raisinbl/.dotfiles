@@ -1,0 +1,40 @@
+" Automatic installation
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+" some thing like theme
+Plug 'junegunn/seoul256.vim'
+" auto complete
+Plug 'github/copilot.vim'
+" view directory tree by :NERDTree
+Plug 'preservim/nerdtree'
+" auto pair
+Plug 'tpope/vim-surround'
+" comment
+Plug 'tpope/vim-commentary'
+" git
+Plug 'tpope/vim-fugitive'
+" status & tabline
+Plug 'itchyny/lightline.vim'
+
+Plug 'editorconfig/editorconfig-vim'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+" statusline cfg
+runtime cfg/lightline.vim 
+
+set tabstop=4 softtabstop=4 shiftwidth=4 smarttab
+set number relativenumber
+syntax on
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
