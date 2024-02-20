@@ -1,0 +1,134 @@
+{
+    "hyprland/window": {
+        "format": "{}",
+		"max-length": 49,
+    "separate-outputs": true
+
+    },
+    "hyprland/workspaces": {
+        "all-outputs": true,
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-click": "activate",
+		"format": "{icon}",
+		"format-icons": {
+			"1":"Main",
+			"2":"Code",
+			"3":"Igconito",
+			"4":"4",
+			"5":"5",
+			"6":"6",
+			"7":"7",
+			"8":"VM",
+			"9":"9"
+		}
+    },
+	"network": {
+		//"interface": "wlp1s0",
+		"format": "{ifname}",
+		"format-wifi": "{essid} ({signalStrength}%) {icon}",
+		"format-ethernet": "{ifname} ",
+		"format-disconnected": "", //An empty format will hide the module.
+		"tooltip-format": "{ipaddr}",
+		"tooltip-format-wifi": "{ipaddr} ",
+		"tooltip-format-ethernet": "{ipaddr} ",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 49,
+		"format-icons": []
+	},
+	"bluetooth": {
+		"format": " {status}",
+		"format-connected": " {device_alias}",
+		"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+		"on-click": "blueman-manager",
+		// "format-device-preference": [ "device0", "device2" ], // preference list deciding the displayed device
+		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+	},
+   "custom/weather" : {
+        "tooltip" : true,
+        "format" : "{}",
+        "interval" : 29,
+        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type" : "json"
+    },
+    "tray": {
+        "icon-size": 12,
+        "spacing": 9
+    },
+    "clock": {
+        "format": "{:%R  %d/%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-icon": ["🕛","🗓️"]
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "min-length": 5
+    },
+    "battery": {
+        "states": {
+            "good": 94,
+            "warning": 39,
+            "critical": 19
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": "🔌 {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["🪫","🔋"]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": "🔇",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 4 --allow-boost --set-limit 150",
+        "on-scroll-down": "pamixer -d 4 --allow-boost --set-limit 150",
+        "scroll-step": 4,
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "",
+            "headset": "🎧",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["🔈", "🔉","🔊"]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{icon} {format_source}",
+        "format-source": "🎤 {volume}%",
+        "format-source-muted": "🎤❌",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 4",
+        "on-scroll-down": "pamixer --default-source -d 4",
+        "scroll-step": 4,
+		"format-icons": [""]
+    },
+	"custom/notification": {
+	    "tooltip": false,
+	    "format": "{icon}",
+	    "format-icons": {
+	      "notification": "<span foreground='red'><sup></sup></span>",
+	      "none": "",
+	      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+	      "dnd-none": "",
+	      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+	      "inhibited-none": "",
+	      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+	      "dnd-inhibited-none": ""
+	    },
+	    "return-type": "json",
+	    "exec-if": "which swaync-client",
+	    "exec": "swaync-client -swb",
+	    "on-click": "swaync-client -t -sw",
+	    "on-click-right": "swaync-client -d -sw",
+	    "escape": true
+	}
+}

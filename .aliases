@@ -1,0 +1,17 @@
+# Set alias for bash
+alias ls='lsd --color=auto'
+alias la='lsd -a'
+alias l.='lsd -d .* --color=auto'
+alias grep='grep --color=auto'
+alias mb='micromamba'
+alias pm='pacman'
+alias autoexpect='PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin autoexpect'
+alias vimfig="vim ~/.vim/vimrc"
+alias clients='hyprctl clients'
+alias insider='code-insiders'
+alias bind='vim ~/.config/hypr/binds.conf'
+alias rule='vim ~/.config/hypr/rules.conf'
+alias monitor='vim ~/.config/hypr/monitors.conf'
+alias hypr='vim ~/.config/hypr/hyprland.conf'
+alias python='bpython'
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'

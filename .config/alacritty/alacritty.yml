@@ -1,0 +1,32 @@
+env:
+  TERM: xterm-256color
+
+window:
+  opacity: 0.8
+  decorations: None
+  startup_mode: Maximized
+
+font:
+  normal:
+    family: MesloLGS NF
+  size: 16
+  offset:
+    x: -2
+    y: -7
+  glyph_offset:
+    x: -1
+    y: -4
+
+colors:
+  primary:
+    background: "#000000"
+
+selection:
+  save_to_clipboard: true
+
+mouse_bindings:
+  - { mouse: Right, action: Paste }
+
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+    # - { key: F4,   mods: None, command: { program: "xdg-open", args:["."] }}
