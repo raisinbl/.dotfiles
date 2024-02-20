@@ -1,6 +1,5 @@
 anydesk-bin
 avizo
-capt-src
 clipmon-git
 cloudflare-warp-bin
 corepad
@@ -11,7 +10,6 @@ gitlab-cli
 go-task-bin
 grimshot-bin-sway
 intellij-idea-ultimate-edition
-labwc
 mariadb-jdbc
 micromamba-bin
 microsoft-edge-stable-bin
@@ -26,7 +24,6 @@ paru-bin
 python2-bin
 spotx-linux
 swaync
-timg
 tp-battery-mode
 ttf-ms-fonts
 ttf-symbola
