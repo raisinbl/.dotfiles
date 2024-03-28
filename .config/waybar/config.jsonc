@@ -18,7 +18,8 @@
 		// "custom/notification",
         "battery",
         "backlight",
-        "pulseaudio"
+        "pulseaudio",
         // "pulseaudio#microphone"
+		"custom/notification"
     ]
 }

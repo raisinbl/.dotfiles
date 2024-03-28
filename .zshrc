@@ -77,7 +77,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn web-search golang archlinux kubectl minikube syft grype sbomasm sbomqs cobra-cli sbt sudo copyfile zsh-select-with-lf)
+plugins=(git gitfast mvn web-search golang archlinux kubectl sbt sudo copyfile gradle podman)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,6 +121,27 @@ export PATH="$PATH:/home/hung/.local/bin"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# custom cd command
 function cd() {
     builtin cd "$@" && ls
 }
+
+source /home/hung/.proxy_env
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
