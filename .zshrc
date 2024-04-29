@@ -77,7 +77,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn web-search golang archlinux kubectl minikube syft grype sbomasm sbomqs cobra-cli sbt sudo copyfile zsh-select-with-lf)
+plugins=(git mvn golang archlinux kubectl minikube syft grype sbomasm sbomqs cobra-cli sbt sudo)
 
 source $ZSH/oh-my-zsh.sh
 

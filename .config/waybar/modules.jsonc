@@ -88,8 +88,9 @@
         "tooltip": false,
         "format-muted": "🔇",
         "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 4 --allow-boost --set-limit 150",
-        "on-scroll-down": "pamixer -d 4 --allow-boost --set-limit 150",
+		"on-right-click": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5 --allow-boost --set-limit 150",
+        "on-scroll-down": "pamixer -d 5 --allow-boost --set-limit 150",
         "scroll-step": 4,
         "format-icons": {
             "headphone": "🎧",
