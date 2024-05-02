@@ -1,3 +1,4 @@
-.config/Code*
 .config/microsoft-edge
+.config/npm-global/*
 .git*
+README.md

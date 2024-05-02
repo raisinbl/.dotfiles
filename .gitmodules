@@ -4,3 +4,9 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".password-store"]
+	path = .password-store
+	url = https://github.com/raisinbl/pw
+[submodule ".config/zsh_custom/themes/powerlevel10k"]
+	path = .config/zsh_custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k

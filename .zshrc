@@ -70,14 +70,14 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=~/.config/zsh_custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast mvn web-search golang archlinux kubectl sbt sudo copyfile gradle podman)
+plugins=(git mvn golang archlinux kubectl minikube syft grype sbomasm sbomqs cobra-cli sbt sudo)
 
 source $ZSH/oh-my-zsh.sh
 

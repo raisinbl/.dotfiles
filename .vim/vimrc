@@ -38,3 +38,5 @@ set number relativenumber
 syntax on
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+vnoremap <C-c> "*y :let @+ = @"<CR>
+map <C-v> "+P

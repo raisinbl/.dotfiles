@@ -1,2 +1,3 @@
 .config/Code*
 .config/microsoft-edge
+.vim/plugged
