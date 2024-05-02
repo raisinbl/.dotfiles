@@ -1,0 +1,18 @@
+[http]
+	proxy = http://10.60.117.113:8080
+[https]
+	proxy = http://10.60.117.113:8080
+[core]
+	editor = vim
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://git.viettelpost.vn"]
+	username = hungnd63
+	helper = store --file /home/hung/.hung.cred
+[user]
+	email = hungnd63@os.viettel.com.vn
+	name = Hung Nguyen Duy - BU BI
