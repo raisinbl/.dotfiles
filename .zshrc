@@ -110,10 +110,7 @@ fi
 
 # PS1="%F{red}%n%f@%F{green}%m%f:%F{blue}%~%f$ "
 
-emulate sh -c 'source ~/.aliases'
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.source_files.zsh
 
 # Created by `pipx` on 2023-09-12 10:08:27
 export PATH="$PATH:/home/hung/.local/bin"
@@ -126,7 +123,6 @@ function cd() {
     builtin cd "$@" && ls
 }
 
-source /home/hung/.proxy_env
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
