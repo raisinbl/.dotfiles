@@ -5,3 +5,8 @@ README.md
 .config/pulse
 .config/pavucontrol.ini
 .config/fcitx5
+.gitconfig
+.gitattributes
+.git/
+.gitignore
+.gitsubmodules

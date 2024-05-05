@@ -1,3 +1,4 @@
 .config/hypr/monitors.conf merge=ours
 .config/systemd/ merge=ours
 .config/kanshi/ merge=ours
+.config/hypr/monitors.conf merge=ours

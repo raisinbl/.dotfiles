@@ -39,7 +39,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+ DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -77,7 +77,7 @@ ZSH_CUSTOM=~/.config/zsh_custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn golang archlinux kubectl minikube syft grype sbomasm sbomqs cobra-cli sbt sudo)
+plugins=(mvn golang archlinux kubectl minikube syft grype sbomasm sbomqs cobra-cli sbt sudo)
 
 source $ZSH/oh-my-zsh.sh
 
