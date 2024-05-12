@@ -24,6 +24,7 @@ alias bind='vim ~/.config/hypr/binds.conf'
 alias rule='vim ~/.config/hypr/rules.conf'
 alias monitor='vim ~/.config/hypr/monitors.conf'
 alias hypr='vim ~/.config/hypr/hyprland.conf'
+alias autostart='vim ~/.config/hypr/autostart.conf'
 
 # git 
 alias ga='git add'
