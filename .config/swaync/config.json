@@ -50,6 +50,8 @@
   "widgets": [
     "inhibitors",
     "title",
+	"volume",
+	"mpris",
     "dnd",
     "notifications"
   ],
@@ -64,6 +66,10 @@
       "clear-all-button": true,
       "button-text": "Clear All"
     },
+	"volume": {
+	  "text": "Volume",
+	  "label": "."
+	},
     "dnd": {
       "text": "Do Not Disturb"
     },
