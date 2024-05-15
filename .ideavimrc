@@ -17,7 +17,7 @@ set hlsearch
 set visualbell
 
 " Use system clipboard
-set clipboard+=unnamed   
+set clipboard+=unnamedplus  
 
 " Use IntelliJ IDEA's join lines feature
 set ideajoin "J(shft+j)
