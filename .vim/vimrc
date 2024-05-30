@@ -75,3 +75,5 @@ nnoremap N Nzzzv
 
 nnoremap k gk
 nnoremap j gj
+
+xnoremap <leader>p \"_dP
