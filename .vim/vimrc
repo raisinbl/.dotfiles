@@ -26,7 +26,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 
 Plug 'editorconfig/editorconfig-vim'
-
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -67,3 +66,14 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
 nnoremap <A-k> <C-w>k
 nnoremap <A-j> <C-w>j
+
+nnoremap <C-D> <C-D>zz
+nnoremap <C-U> <C-U>zz
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+nnoremap k gk
+nnoremap j gj
+
+xnoremap <leader>p \"_dP
