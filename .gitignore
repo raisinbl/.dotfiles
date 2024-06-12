@@ -1,3 +1,6 @@
 .config/Code*
 .config/microsoft-edge
 .vim/plugged
+zeppelin/notebook
+zeppelin/data
+zeppelin/logs
