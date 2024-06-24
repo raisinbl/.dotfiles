@@ -67,11 +67,11 @@ nnoremap <A-l> <C-w>l
 nnoremap <A-k> <C-w>k
 nnoremap <A-j> <C-w>j
 
-nnoremap <C-D> <C-D>zz
-nnoremap <C-U> <C-U>zz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 nnoremap n nzzzv
-nnoremap N Nzzzv
+nnoremap n nzzzv
 
 nnoremap k gk
 nnoremap j gj

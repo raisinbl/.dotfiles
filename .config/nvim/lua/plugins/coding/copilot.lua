@@ -10,16 +10,16 @@ return {
         auto_trigger = false,
         debounce = 75,
         keymap = {
-          accept = "<M-CR>",
+          accept = "<CR>",
           accept_word = "<M-l>",
-          accept_line = "M-L>",
+          accept_line = "<M-L>",
           next = "<M-]>",
           prev = "<M-[>",
           dismiss = "<C-]>",
         },
       },
       panel = {
-        enabled = false,
+        enabled = true,
         auto_refresh = false,
         -- keymap = {
         --   jump_prev = "[[",
@@ -34,7 +34,7 @@ return {
         },
       },
       filetypes = {
-        yaml = false,
+        -- yaml = false,
         help = false,
         gitcommit = false,
         gitrebase = false,
