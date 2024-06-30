@@ -18,6 +18,10 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- In the part where you configure autostart applications
 awful.spawn.with_shell("setxkbmap -option caps:escape_shifted_capslock")
 awful.spawn.with_shell("picom")
+awful.spawn.with_shell("fcitx5")
+awful.spawn.with_shell("$HOME/scripts/x/configs/touchpad.sh")
+-- awful.spawn.with_shell("greenclip daemon")
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")

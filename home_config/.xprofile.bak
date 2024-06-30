@@ -1,0 +1,10 @@
+# compositor
+picom
+# input method
+fcitx5
+# set up keyboard
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+# set up touchpad
+sh scripts/x/configs/touchpad.sh
+# set up screen
+xrdb -merge ~/.Xresources

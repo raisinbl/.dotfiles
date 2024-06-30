@@ -1,12 +1,12 @@
 [submodule ".config/alacritty/themes"]
-	path = .config/alacritty/themes
+	path = home_config/.config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
 [submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+	path = home_config/.oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule ".password-store"]
-	path = .password-store
+	path = home_config/.password-store
 	url = https://github.com/raisinbl/pw
 [submodule ".config/zsh_custom/themes/powerlevel10k"]
-	path = .config/zsh_custom/themes/powerlevel10k
+	path = home_config/.config/zsh_custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
