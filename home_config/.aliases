@@ -6,7 +6,6 @@ alias grep='grep --color=auto'
 alias mb='micromamba'
 alias autoexpect='PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin autoexpect'
 alias vimfig="vim ~/.vim/vimrc"
-alias clients='hyprctl clients'
 alias insider='code-insiders'
 
 alias python='bpython'
@@ -19,12 +18,20 @@ alias fonts='fc-list : family style'
 alias ghcs='gh copilot suggest'
 alias ghce='gh copilot explain'
 
-# hyprland
-alias bind='vim ~/.config/hypr/binds.conf'
-alias rule='vim ~/.config/hypr/rules.conf'
-alias monitor='vim ~/.config/hypr/monitors.conf'
-alias hypr='vim ~/.config/hypr/hyprland.conf'
-alias autostart='vim ~/.config/hypr/autostart.conf'
+# if display server is wayland 
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+	# hyprland
+	alias clients='hyprctl clients'
+	alias bind='vim ~/.config/hypr/binds.conf'
+	alias rule='vim ~/.config/hypr/rules.conf'
+	alias monitor='vim ~/.config/hypr/monitors.conf'
+	alias hypr='vim ~/.config/hypr/hyprland.conf'
+	alias autostart='vim ~/.config/hypr/autostart.conf'
+# if display server is x11
+else
+	alias bind='vim ~/.config/awesome/keybinds.lua'
+	alias aw='vim ~/.config/awesome/rc.lua'
+fi
 
 # git 
 alias ga='git add'
