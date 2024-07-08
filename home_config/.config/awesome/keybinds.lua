@@ -7,7 +7,7 @@ local gears = require("gears")
 local modKey = "Mod4"
 local altKey = "Mod1"
 
-local default_keybinds = require("default_keybinds")
+default_keybinds = require("default_keybinds")
 -- Key bindings
 globalkeys = gears.table.join(
 	default_keybinds,
@@ -94,10 +94,10 @@ globalkeys = gears.table.join(
 		awful.spawn("pamixer --default-source -t")
 	end, { description = "mute microphone", group = "media" }),
 
-	awful.key({ modKey, altKey }, "l", function()
+	awful.key({ modKey}, "]", function()
 		awful.spawn("pamixer -i 5 --allow-boost --set-limit 150")
 	end, { description = "raise volume", group = "media" }),
-	awful.key({ modKey, altKey }, "k", function()
+	awful.key({ modKey}, "[", function()
 		awful.spawn("pamixer -d 5 --allow-boost")
 	end, { description = "lower volume", group = "media" }),
 	awful.key({ modKey, altKey }, "m", function()

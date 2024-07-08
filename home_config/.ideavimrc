@@ -129,8 +129,8 @@ xnoremap <leader>p \"_dP
 inoremap jk <Esc>
 
 " Tab navigation
-nnoremap <A-n> :tabnext<CR>
-nnoremap <A-p> :tabprev<CR>
+nnoremap <S-l> :tabnext<CR>
+nnoremap <S-h> :tabprev<CR>
 
 " Pane navigation
 nnoremap <A-h> <C-w>h

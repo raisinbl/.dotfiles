@@ -1,0 +1,8 @@
+# compositor
+picom &
+# input method
+fcitx5 &
+# keymap
+setxkbmap -layout 'us' -option caps:escape_shifted_capslock
+# set up touchpad
+. scripts/x/configs/touchpad.sh &

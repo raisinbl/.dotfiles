@@ -16,12 +16,7 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- In the part where you configure autostart applications
-awful.spawn.with_shell("setxkbmap -option caps:escape_shifted_capslock")
-awful.spawn.with_shell("picom")
-awful.spawn.with_shell("fcitx5")
-awful.spawn.with_shell("$HOME/scripts/x/configs/touchpad.sh")
--- awful.spawn.with_shell("greenclip daemon")
-
+awful.spawn("nm-applet")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -235,6 +230,8 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Create the wibox
 	s.mywibox = awful.wibar({ position = "top", screen = s })
 
+	-- widget
+	local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
@@ -249,6 +246,7 @@ awful.screen.connect_for_each_screen(function(s)
 			layout = wibox.layout.fixed.horizontal,
 			mykeyboardlayout,
 			wibox.widget.systray(),
+			volume_widget(),
 			mytextclock,
 			s.mylayoutbox,
 		},
