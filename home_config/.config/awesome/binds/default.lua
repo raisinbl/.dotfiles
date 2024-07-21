@@ -5,11 +5,17 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+-- Default modkey.
+-- Usually, Mod4 is the key with a logo between Control and Alt.
+-- If you do not like this or do not have such a key,
+-- I suggest you to remap Mod4 to another key using xmodmap or other tools.
+-- However, you can use another modifier like Mod1, but it may interact with others.
+
 -- Define your modkey (usually Mod3, the Super or Windows key)
 local modkey = "Mod4"
 
 -- {{{ Key bindings
-globalkeys = gears.table.join(
+local default_keybinds = gears.table.join(
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
 	awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
@@ -109,8 +115,8 @@ globalkeys = gears.table.join(
 -- Be careful: we use keycodes to make it work on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
-	globalkeys = gears.table.join(
-		globalkeys,
+	default_keybinds = gears.table.join(
+		default_keybinds,
 		-- View tag only.
 		awful.key({ modkey }, "#" .. i + 9, function()
 			local screen = awful.screen.focused()
@@ -148,4 +154,4 @@ for i = 1, 9 do
 	)
 end
 
-return globalkeys
+return default_keybinds
