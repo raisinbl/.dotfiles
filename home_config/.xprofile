@@ -6,3 +6,9 @@ fcitx5 &
 setxkbmap -layout 'us' -option caps:escape_shifted_capslock
 # set up touchpad
 . scripts/x/configs/touchpad.sh &
+# pulseaudio
+/usr/libexec/pulseaudio-module-xrdp/load_pa_modules.sh
+# keybinds
+xbindkeys
+# screen layout
+.screenlayout/default.sh &
