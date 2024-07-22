@@ -222,6 +222,9 @@ map <leader>gb <Action>(Git.Branches)
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 
+" Debug
+map <leader>b <Action>(ToggleLineBreakpoint)
+
 
 "" Vim handler
 "" ========================================================

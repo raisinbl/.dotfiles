@@ -7,14 +7,14 @@ local gears = require("gears")
 local modKey = "Mod4"
 local altKey = "Mod1"
 
-default_keybinds = require("default_keybinds")
--- Key bindings
-globalkeys = gears.table.join(
-	default_keybinds,
+local custom_keybinds = gears.table.join(
 	-- Existing keybindings here...
 
 	-- Add new keybindings based on your Hyprland config
 	-- Close active window
+	awful.key({ modKey }, "Return", function()
+		awful.spawn("alacritty")
+	end, { description = "Launch Terminal", group = "launcher" }),
 	awful.key({ modKey }, "c", function()
 		awful.spawn("xdotool getactivewindow windowclose")
 	end, { description = "close active window", group = "client" }),
@@ -28,7 +28,7 @@ globalkeys = gears.table.join(
 	-- if hostname == "arch-vtp" then launch IntelliJ IDEA Ultimate Edition
 	-- else launch IntelliJ Gateway
 	awful.key({ modKey }, "i", function()
-		awful.spawn("sh arch/utils/launch-idea.sh")
+		awful.spawn("intelij-idea-ultimate-edition")
 	end, { description = "launch IntelliJ IDEA", group = "launcher" }),
 
 	-- Launch application launcher (rofi)
@@ -78,50 +78,7 @@ globalkeys = gears.table.join(
 	-- Launch Telegram
 	awful.key({ modKey }, "t", function()
 		awful.spawn("telegram-desktop")
-	end, { description = "launch Telegram", group = "launcher" }),
-
-	-- Volume controls
-	awful.key({}, "XF86AudioRaiseVolume", function()
-		awful.spawn("pamixer -i 10 --allow-boost --set-limit 150")
-	end, { description = "raise volume", group = "media" }),
-	awful.key({}, "XF86AudioLowerVolume", function()
-		awful.spawn("pamixer -d 10 --allow-boost")
-	end, { description = "lower volume", group = "media" }),
-	awful.key({}, "XF86AudioMute", function()
-		awful.spawn("pamixer -t")
-	end, { description = "mute volume", group = "media" }),
-	awful.key({}, "XF86AudioMicMute", function()
-		awful.spawn("pamixer --default-source -t")
-	end, { description = "mute microphone", group = "media" }),
-
-	awful.key({ modKey}, "]", function()
-		awful.spawn("pamixer -i 5 --allow-boost --set-limit 150")
-	end, { description = "raise volume", group = "media" }),
-	awful.key({ modKey}, "[", function()
-		awful.spawn("pamixer -d 5 --allow-boost")
-	end, { description = "lower volume", group = "media" }),
-	awful.key({ modKey, altKey }, "m", function()
-		awful.spawn("pamixer -t")
-	end, { description = "mute volume", group = "media" }),
-
-	-- Brightness controls
-	awful.key({}, "XF86MonBrightnessUp", function()
-		awful.spawn("brightnessctl set 10%+")
-	end, { description = "increase brightness", group = "screen" }),
-	awful.key({}, "XF86MonBrightnessDown", function()
-		awful.spawn("brightnessctl set 10%-")
-	end, { description = "decrease brightness", group = "screen" }),
-
-	-- Screenshot
-	awful.key({}, "Print", function()
-		awful.spawn("maim | xclip -selection clipboard -t image/png")
-	end, { description = "take screenshot", group = "screen" }),
-	awful.key({ modKey, "Shift" }, "s", function()
-		awful.spawn("maim -s | xclip -selection clipboard -t image/png")
-	end, { description = "take screenshot of selection", group = "screen" }),
-	awful.key({ modKey, altKey }, "Print", function()
-		awful.spawn("maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png")
-	end, { description = "take screenshot of active window", group = "screen" })
+	end, { description = "launch Telegram", group = "launcher" })
 )
 
-return globalkeys
+return custom_keybinds
