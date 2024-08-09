@@ -110,7 +110,7 @@ function wibar.createWibox(s)
 			mykeyboardlayout,
 			wibox.widget.systray(),
 			volume_widget(),
-			battery_widget(),
+			-- battery_widget(),
 			mytextclock,
 			s.mylayoutbox,
 		},

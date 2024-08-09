@@ -45,6 +45,8 @@
 # take selection screenshot
 "maim -s | xclip -selection clipboard -t image/png"
 	Shift + Print
+"maim -s | xclip -selection clipboard -t image/png"
+	Shift+Mod4 + s
 # take screenshot of a window
 "maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png"
 	Alt + Print

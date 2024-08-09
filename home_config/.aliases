@@ -29,7 +29,7 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 	alias autostart='vim ~/.config/hypr/autostart.conf'
 # if display server is x11
 else
-	alias bind='vim ~/.config/awesome/keybinds/custom.lua'
+	alias bind='vim ~/.config/awesome/binds/custom.lua'
 	alias aw='vim ~/.config/awesome/rc.lua'
 	alias rule='vim ~/.config/awesome/rules.lua'
 fi

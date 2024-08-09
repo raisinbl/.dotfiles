@@ -5,6 +5,7 @@ local gears = require("gears")
 
 -- Define your modKey (usually Mod4, the Super or Windows key)
 local modKey = "Mod4"
+local shiftKey = "Shift"
 local altKey = "Mod1"
 
 local custom_keybinds = gears.table.join(
@@ -15,9 +16,9 @@ local custom_keybinds = gears.table.join(
 	awful.key({ modKey }, "Return", function()
 		awful.spawn("alacritty")
 	end, { description = "Launch Terminal", group = "launcher" }),
-	awful.key({ modKey }, "c", function()
-		awful.spawn("xdotool getactivewindow windowclose")
-	end, { description = "close active window", group = "client" }),
+	-- awful.key({ modKey }, "c", function()
+	-- 	awful.spawn("xdotool getactivewindow windowclose")
+	-- end, { description = "close active window", group = "client" }),
 
 	-- Launch file manager (pcmanfm)
 	awful.key({ modKey }, "e", function()
@@ -41,10 +42,10 @@ local custom_keybinds = gears.table.join(
 		awful.spawn("nwg-bar")
 	end, { description = "launch nwg-bar", group = "launcher" }),
 
-	-- Toggle night mode
-	awful.key({ modKey, "Shift" }, "s", function()
-		awful.spawn("sh arch/utils/night-mode.sh")
-	end, { description = "toggle night mode", group = "custom" }),
+	-- -- Toggle night mode
+	-- awful.key({ modKey, "Shift" }, "s", function()
+	-- 	awful.spawn("sh arch/utils/night-mode.sh")
+	-- end, { description = "toggle night mode", group = "custom" }),
 
 	-- Launch vmware
 	awful.key({ modKey }, "F8", function()
@@ -78,7 +79,17 @@ local custom_keybinds = gears.table.join(
 	-- Launch Telegram
 	awful.key({ modKey }, "t", function()
 		awful.spawn("telegram-desktop")
-	end, { description = "launch Telegram", group = "launcher" })
-)
+	end, { description = "launch Telegram", group = "launcher" }),
 
+	-- Screenshot
+	awful.key({ modKey, shiftKey }, "s", function()
+		awful.spawn("maim -s | xclip -selection clipboard -t image/png")
+	end, { description = "screenshot", group = "utils" }),
+
+	-- Remmina
+	awful.key({ modKey, shiftKey }, "r", function()
+		awful.spawn("remmina")
+	end, { description = "launch Remmina", group = "launcher" })
+
+	)
 return custom_keybinds

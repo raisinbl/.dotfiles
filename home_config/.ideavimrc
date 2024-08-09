@@ -17,6 +17,10 @@ set incsearch
 set hlsearch
 
 set visualbell
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
 
 " Use system clipboard
 set clipboard+=unnamedplus  
