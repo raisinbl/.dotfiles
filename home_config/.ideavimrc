@@ -17,9 +17,13 @@ set incsearch
 set hlsearch
 
 set visualbell
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
 
 " Use system clipboard
-set clipboard+=unnamed   
+set clipboard+=unnamedplus  
 
 " Use IntelliJ IDEA's join lines feature
 set ideajoin "J(shft+j)
@@ -222,6 +226,9 @@ map <leader>gb <Action>(Git.Branches)
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 
+" Debug
+map <leader>b <Action>(ToggleLineBreakpoint)
+
 
 "" Vim handler
 "" ========================================================
@@ -231,25 +238,3 @@ sethandler <C-L> a:ide
 " Use Tab for command completion
 sethandler <C-Right> a:ide
 
-" bookmark
-sethandler <C-1> a:ide
-sethandler <C-2> a:ide
-sethandler <C-3> a:ide
-sethandler <C-4> a:ide
-sethandler <C-5> a:ide
-sethandler <C-6> a:ide
-sethandler <C-7> a:ide
-sethandler <C-8> a:ide
-sethandler <C-9> a:ide
-sethandler <C-0> a:ide
-
-sethandler <C-Shift-1> a:ide
-sethandler <C-Shift-2> a:ide
-sethandler <C-Shift-3> a:ide
-sethandler <C-Shift-4> a:ide
-sethandler <C-Shift-5> a:ide
-sethandler <C-Shift-6> a:ide
-sethandler <C-Shift-7> a:ide
-sethandler <C-Shift-8> a:ide
-sethandler <C-Shift-9> a:ide
-sethandler <C-Shift-0> a:ide

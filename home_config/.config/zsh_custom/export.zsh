@@ -18,6 +18,10 @@ export PATH=$PATH:$KAFKA_HOME/bin
 export HBASE_HOME=/opt/hbase
 export PATH=$PATH:$HBASE_HOME/bin
 
+# Phoenix
+export PHOENIX_HOME=/opt/phoenix
+export PATH=$PATH:$PHOENIX_HOME/bin
+
 # IdeaPad Perf
 export PATH=$PATH:$HOME/arch/utils/ideapad-perf
 

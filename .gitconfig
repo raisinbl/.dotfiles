@@ -15,4 +15,11 @@
 	helper = store --file /home/hung/.hung.cred
 [user]
 	email = hungnd63@os.viettel.com.vn
-	name = Hung Nguyen Duy - BU BI
+	name = Hung Nguyen Duy - BI BU
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main

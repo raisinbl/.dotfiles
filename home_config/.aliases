@@ -29,7 +29,7 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 	alias autostart='vim ~/.config/hypr/autostart.conf'
 # if display server is x11
 else
-	alias bind='vim ~/.config/awesome/keybinds/custom.lua'
+	alias bind='vim ~/.config/awesome/binds/custom.lua'
 	alias aw='vim ~/.config/awesome/rc.lua'
 	alias rule='vim ~/.config/awesome/rules.lua'
 fi
@@ -50,6 +50,13 @@ alias gpf='git push --force'
 alias gpl='git pull'
 alias gplf='git pull --force'
 alias gs='git status'
+alias gst='git stash'
+alias gsm='git stash -m'
+alias gsl='git stash list'
+alias gsa='git stash apply'
+alias gsp='git stash pop'
 alias gl='git log --oneline --graph --all --decorate'
 alias gm='git merge'
 alias gd='git diff'
+alias gr='git reflog'
+
