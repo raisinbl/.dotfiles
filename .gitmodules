@@ -10,3 +10,12 @@
 [submodule ".config/zsh_custom/themes/powerlevel10k"]
 	path = home_config/.config/zsh_custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
+[submodule "awesome-wm-widgets"]
+	path = home_config/.config/awesome/awesome-wm-widgets
+	url = https://github.com/streetturtle/awesome-wm-widgets
+[submodule "zsh_plugins/zsh-autosuggestions"]
+	path = home_config/.config/zsh_custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh_plugins/zsh-syntax-highlighting"]
+	path = home_config/.config/zsh_custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
