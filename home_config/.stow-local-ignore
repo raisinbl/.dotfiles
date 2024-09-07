@@ -1,0 +1,7 @@
+.*/.config/microsoft-edge/.*
+.*/.config/npm-global.*
+.git*
+README.md
+.*/.config/pulse
+.*/.config/pavucontrol.ini
+.*/.config/fcitx5
