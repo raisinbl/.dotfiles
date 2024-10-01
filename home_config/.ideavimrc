@@ -17,9 +17,9 @@ set incsearch
 set hlsearch
 
 set visualbell
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set smarttab
 
 " Use system clipboard
@@ -157,7 +157,8 @@ nnoremap qj @q
 inoremap <C-j> <Action>(PopupMenu-selectNext)
 inoremap <C-k> <Action>(PopupMenu-selectPrev)
 
-
+" Copilot
+imap <C-l> <Action>(copilot.applyInlaysNextWord)
 "" Leader commands
 "" ========================================================
 
@@ -234,7 +235,7 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 "" ========================================================
 
 " Use Ctrl-L to accept copilot next word suggestions
-sethandler <C-L> a:ide
+" sethandler <C-L> a:ide
 " Use Tab for command completion
-sethandler <C-Right> a:ide
+" sethandler <C-Right> a:ide
 

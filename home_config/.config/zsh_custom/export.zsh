@@ -32,3 +32,6 @@ export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
 # npm dir
 #export PATH=$PATH:$HOME/.config/npm-global/bin
+
+# Electron Wayland
+export ELECTRON_OZONE_PLATFORM_HINT="auto"

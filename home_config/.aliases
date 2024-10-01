@@ -18,7 +18,7 @@ alias fonts='fc-list : family style'
 alias ghcs='gh copilot suggest'
 alias ghce='gh copilot explain'
 
-# if display server is wayland 
+# if display server is wayland
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 	# hyprland
 	alias clients='hyprctl clients'
@@ -34,7 +34,7 @@ else
 	alias rule='vim ~/.config/awesome/rules.lua'
 fi
 
-# git 
+# git
 alias ga='git add'
 alias gaa='git add .'
 alias gau='git add --update'
@@ -50,6 +50,7 @@ alias gpf='git push --force'
 alias gpl='git pull'
 alias gplf='git pull --force'
 alias gs='git status'
+alias gsu='git status -uno'
 alias gst='git stash'
 alias gsm='git stash -m'
 alias gsl='git stash list'
@@ -58,5 +59,7 @@ alias gsp='git stash pop'
 alias gl='git log --oneline --graph --all --decorate'
 alias gm='git merge'
 alias gd='git diff'
-alias gr='git reflog'
+alias grl='git reflog'
 
+# lazygit
+alias lg='lazygit'
