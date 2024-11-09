@@ -17,9 +17,9 @@ set incsearch
 set hlsearch
 
 set visualbell
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set smarttab
 
 " Use system clipboard
@@ -215,13 +215,13 @@ nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
-nmap <leader>gf <Action>(Back)
-nmap <leader>gb <Action>(Forward)
+nmap <leader>gb <Action>(Back)
+nmap <leader>gf <Action>(Forward)
 
 " Git windows
 map <leader>gc <Action>(CheckinProject)
 map <leader>gs <Action>(ActivateVersionControlToolWindow)
-map <leader>gb <Action>(Git.Branches)
+" map <leader>gb <Action>(Git.Branches)
 
 " Errors
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
