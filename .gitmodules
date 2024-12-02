@@ -7,6 +7,7 @@
 [submodule ".password-store"]
 	path = home_config/.password-store
 	url = https://github.com/raisinbl/pw
+	branch = main
 [submodule ".config/zsh_custom/themes/powerlevel10k"]
 	path = home_config/.config/zsh_custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
