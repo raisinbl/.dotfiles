@@ -230,6 +230,8 @@ map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 " Debug
 map <leader>b <Action>(ToggleLineBreakpoint)
 
+" Open recent
+map <leader>r <Action>(RecentProjectListGroup)
 
 "" Vim handler
 "" ========================================================
