@@ -22,6 +22,9 @@ export PATH=$PATH:$HBASE_HOME/bin
 export PHOENIX_HOME=/opt/phoenix
 export PATH=$PATH:$PHOENIX_HOME/bin
 
+# Airflow
+export AIRFLOW_HOME=/opt/airflow
+
 # IdeaPad Perf
 export PATH=$PATH:$HOME/arch/utils/ideapad-perf
 
