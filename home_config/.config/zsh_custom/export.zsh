@@ -25,6 +25,10 @@ export PATH=$PATH:$PHOENIX_HOME/bin
 # Airflow
 export AIRFLOW_HOME=/opt/airflow
 
+# Zookeeper
+export ZOOKEEPER_HOME=/opt/zookeeper
+export PATH=$PATH:$ZOOKEEPER_HOME/bin
+
 # IdeaPad Perf
 export PATH=$PATH:$HOME/arch/utils/ideapad-perf
 
