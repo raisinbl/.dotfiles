@@ -29,6 +29,10 @@ export AIRFLOW_HOME=/opt/airflow
 export ZOOKEEPER_HOME=/opt/zookeeper
 export PATH=$PATH:$ZOOKEEPER_HOME/bin
 
+# Nifi
+export NIFI_HOME=/opt/nifi
+export PATH=$PATH:$NIFI_HOME/bin
+
 # IdeaPad Perf
 export PATH=$PATH:$HOME/arch/utils/ideapad-perf
 
