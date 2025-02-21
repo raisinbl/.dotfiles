@@ -9,3 +9,8 @@ PAGER=less;  	export PAGER
 
 # Wayland
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
+
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=fcitx
