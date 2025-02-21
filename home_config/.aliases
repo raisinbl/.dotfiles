@@ -8,7 +8,6 @@ alias autoexpect='PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 alias vimfig="vim ~/.vim/vimrc"
 alias insider='code-insiders'
 
-alias python='bpython'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias pm='podman'
 alias pc='podman-compose'
