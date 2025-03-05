@@ -1,0 +1,75 @@
+{
+    "editor.fontFamily": "'Intel One Mono'",
+    "editor.fontLigatures": "'ss01'",
+    "editor.tabSize": 2,
+    "editor.fontSize": 18,
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "first",
+    "editor.largeFileOptimizations": true,
+
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+
+    "keyboard.dispatch": "keyCode",
+	"window.titleBarStyle": "custom",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "update.mode": "start",
+    "json.maxItemsComputed": 500000,
+    "open-php-html-js-in-browser.selectedBrowser": "Edge",
+    "python.defaultInterpreterPath": "/bin/python",
+    "notebook.output.textLineLimit": 20,
+    "workbench.colorTheme": "GitHub Dark",
+    "notebook.lineNumbers": "on",
+    "[python]": {
+        
+        "editor.formatOnType": true
+    },
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "files.autoSave": "onWindowChange",
+    "terminal.integrated.inheritEnv": false,
+    "database-client.autoSync": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "github.copilot.enable": {
+        "*": true
+    },
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "q"],
+            "commands": [ "workbench.action.closeActiveEditor" ]
+        },
+        {
+            "before": ["<S-l>"],
+            "commands": [ "workbench.action.nextEditor" ]
+        },
+        {
+            "before": ["<S-h>"],
+            "commands": [ "workbench.action.previousEditor" ]
+        }
+    ]
+}
