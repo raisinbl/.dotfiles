@@ -70,6 +70,14 @@
         {
             "before": ["<S-h>"],
             "commands": [ "workbench.action.previousEditor" ]
+        },
+        {
+            "before": ["<leader>", "z", "c"],
+            "commands": [ "editor.foldAll" ]
+        },
+        {
+            "before": ["<leader>", "z", "o"],
+            "commands": [ "editor.unfoldAll" ]
         }
     ]
 }
