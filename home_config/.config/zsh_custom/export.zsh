@@ -36,10 +36,10 @@ export PATH=$PATH:$NIFI_HOME/bin
 # IdeaPad Perf
 export PATH=$PATH:$HOME/arch/utils/ideapad-perf
 
-# Go
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+# # Go
+# export GOPATH=$HOME/go
+# export GOBIN=$GOPATH/bin
+# export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
 # npm dir
 #export PATH=$PATH:$HOME/.config/npm-global/bin
