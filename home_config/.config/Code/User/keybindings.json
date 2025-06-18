@@ -1,8 +1,7 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "ctrl+shift+c",
-        "command": "-workbench.action.terminal.openNativeConsole",
-        "when": "!terminalFocus"
+	    "key": "shift shift",
+	    "command": "workbench.action.quickOpen"
     }
 ]

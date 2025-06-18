@@ -78,6 +78,14 @@
         {
             "before": ["<leader>", "z", "o"],
             "commands": [ "editor.unfoldAll" ]
-        }
+        },
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
     ]
 }
