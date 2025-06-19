@@ -87,5 +87,9 @@
             "before": ["k"],
             "after": ["g", "k"]
         },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [ "editor.debug.action.toggleBreakpoint" ]
+        }
     ]
 }
