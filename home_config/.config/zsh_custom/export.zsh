@@ -1,6 +1,11 @@
 # Java
-export PATH="/usr/lib/jvm/default/:$PATH"
-export JAVA_HOME=/usr/lib/jvm/default
+# case when Arch -> default, Ubuntu -> java-default (apt)
+if [ "$(uname -o)" = "GNU/Linux" ] && grep -qi arch /etc/*-release 2>/dev/null; then
+  export JAVA_HOME=/usr/lib/jvm/default
+else
+  export JAVA_HOME=/usr/lib/jvm/default-java
+fi
+export PATH=$PATH:$JAVA_HOME/bin
 
 # Hadoop
 export HADOOP_HOME=/opt/hadoop
@@ -35,6 +40,11 @@ export PATH=$PATH:$NIFI_HOME/bin
 
 # IdeaPad Perf
 export PATH=$PATH:$HOME/arch/utils/ideapad-perf
+
+# Doris
+export DORIS_HOME=/opt/doris
+export PATH=$PATH:$DORIS_HOME/fe/bin
+export PATH=$PATH:$DORIS_HOME/be/bin
 
 # # Go
 # export GOPATH=$HOME/go
