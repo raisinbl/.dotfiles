@@ -12,7 +12,7 @@ x = -1
 y = -4
 
 [font.normal]
-family = "MesloLGS NF"
+family = "JetBrainsMono Nerd Font"
 
 [font.offset]
 x = -2
