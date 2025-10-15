@@ -77,7 +77,7 @@ ZSH_CUSTOM=~/.config/zsh_custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(yt_music gh-cli-copilot mvn archlinux sudo docker zsh-autosuggestions zsh-syntax-highlighting podman conda-zsh-completion)
+plugins=(yt_music gh-cli-copilot mvn archlinux sudo docker zsh-autosuggestions zsh-syntax-highlighting minikube kubectl helm)
 
 source $ZSH/oh-my-zsh.sh
 

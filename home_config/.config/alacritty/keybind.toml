@@ -1,0 +1,6 @@
+[keyboard]
+bindings = [
+  { action = "ToggleViMode", key = "Return", mods = "Alt|Shift"},
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+] 
