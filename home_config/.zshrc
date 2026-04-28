@@ -77,7 +77,7 @@ ZSH_CUSTOM=~/.config/zsh_custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(yt_music gh-cli-copilot mvn archlinux sudo docker zsh-autosuggestions zsh-syntax-highlighting minikube kubectl helm)
+plugins=(yt_music copilot-cli mvn archlinux sudo docker zsh-autosuggestions zsh-syntax-highlighting minikube kubectl helm conda-zsh-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,16 +124,12 @@ function cd() {
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
+# Modularized conda initialization: source machine-specific logic from dotfiles
+DOTFILES=${DOTFILES:-"$HOME/.dotfiles"}
+if [ -f "$DOTFILES/home_config/conda.zsh" ]; then
+  source "$DOTFILES/home_config/conda.zsh"
 fi
-unset __conda_setup
 # <<< conda initialize <<<
+
+# Added by Antigravity
+export PATH="/Users/hung/.antigravity/antigravity/bin:$PATH"
